@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .container{
+            display: flex;
+            justify-content:center;
+        }
+        .form{
+            text-align: center;
+
+        }
+        .form input{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+          <ul class="main-header__item-list">
+            <li class="main-header__item"><a class="active" href="/shop">Shop</a></li>
+            <li class="main-header__item"><a href="/admin/add-product">Add-Product</a></li>
+            <li class="main-header__item"><a href="/contactus">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="card border-5 border-primary" style="background-color:blanchedalmond ; height:550px;width: 600px;">
+                <div class="card-body">
+                    <h2 style="text-align:center; margin-top:20px;color:orange">Book An Appointment</h2>
+                    <h6 style="text-align:center"> Fill Your Details</h6>
+                    <hr>
+                    <div class="form">
+                        <form action="/success" method="POST" id="form">
+                            <label for="name" class="form-label">Name</label><br>
+                            <input type="text" id="name" class="form-control" name="name"><br><br>
+                            <label for="email" class="form-label">Email</label><br>
+                            <input type="email" id="email" class="form-control" name="label"><br><br>
+                            <label for="tel" class="form-label">Phone number</label><br>
+                            <input type="number" id="tel" class="form-control" name="tel"><br><br>
+                            <label for="time" class="form-label">Time and date</label>
+                            <div class="input-group">
+                                <input type="date" id="date" class="form-control" name="date">
+                                <input type="time" id="time" class="form-control" name="time">
+                            </div>
+                            <br>
+                            <button type="submit" class="button">GET A CALL</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
