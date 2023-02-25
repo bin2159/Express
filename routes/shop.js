@@ -2,7 +2,6 @@ const path=require('path')
 const express=require('express')
 const rootDir=require('../util/path')
 const router=express.Router()
-router.get('/',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,'../','views','shop.htm'))
-})
+const product=require('../controllers/products')
+router.get('/',product.shopProduct)
 module.exports=router
