@@ -1,10 +1,7 @@
 const path=require('path')
 const express=require('express')
 const router=express.Router()
-router.get('/',(req,res,next)=>{
-    res.sendFile(path.join(__dirname,'../','views','contactus.htm'))
-})
-router.post('/',(req,res,next)=>{
-    res.redirect('/success')
-})
+const pages=require('../controllers/pages')
+router.get('/',pages.getcontactus)
+router.post('/',pages.postcontactus)
 module.exports=router
